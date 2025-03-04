@@ -1,0 +1,588 @@
+
+
+/* Mobile (default styles) */
+body {
+  width: 90%;
+  color: rgb(49, 49, 49);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(250, 249, 249);
+  font-size: 14px;
+}
+
+h1 {
+  font-family: Cookie, sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+.siteHeader {
+  color: inherit;
+  text-decoration: none;
+  background-color: rgb(195, 195, 236);
+  padding: 1rem 2rem;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.siteHeader h1 {
+  font-weight: 200;
+}
+.headerDiv {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+.aboutDiv {
+  padding: 0 1.5em 1.5em 1.5em;
+  border: 2px solid rgb(195, 195, 236);
+  margin: 3em 1em;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Link Styles */
+.linkDiv {
+  flex-direction: column;
+
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+
+  gap: 5px;
+  margin-bottom: 15px;;
+}
+
+.linkDiv a {
+  font-size: 0.85em;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: inherit;
+  text-decoration: underline;
+
+}
+
+.linksBtn {
+  background-color: inherit;
+  font-size: 1.5rem;
+  display: flex;
+  align-self: left;
+  margin: 0 auto;
+  border: 2px solid rgb(195, 195, 236);
+  color:rgb(153, 153, 153);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.hidden {
+  display: none
+}
+
+
+/* Sticky Note Styles */
+.sticky-note {
+  min-height: 300px;
+  min-width: 350px;
+  background: linear-gradient(to bottom, #ffffcc, #f5f5a2);
+  width: 70%;
+  max-width: 800px;
+  padding: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.green {
+  background: linear-gradient(to bottom, #d2ffcc, #a2f5a2);
+}
+
+.pink {
+  background: linear-gradient(to bottom, #ffccff, #f5a2f5);
+}
+
+.orange {
+  background: linear-gradient(to bottom, #ffd3a7, #f3b08b);
+}
+
+.blue {
+  background: linear-gradient(to bottom, #ccffff, #a2f5f5);
+}
+
+.sticky-note:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Main Content Styles */
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainDiv h1, .userInfoDiv h1, .defaultDiv h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  margin: 50px 20px 20px 20px;
+}
+
+/* Task List Styles */
+.taskLi {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 0 auto 1.5rem auto;
+}
+
+.taskLi h2 {
+  font-family: cursive;
+  font-size: 1.75rem;
+  text-decoration: underline;
+  margin: 10px 10px 25px 10px;
+}
+
+.taskInfo i {
+  font-size: 4.5em;
+
+}
+
+.taskInfo {
+  display: flex;
+  padding-bottom: 2em;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5em;
+}
+
+.taskFacts {
+  font-size: 0.75rem;
+}
+
+.taskHead {
+  text-align: center;
+}
+
+.taskInfo button {
+  background-color: rgb(195, 195, 236);
+  border: 2px solid black;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.taskDesc {
+  font-family: cursive;
+  font-size: 1.2rem;
+}
+
+.incomplete {
+  color: rgb(119, 0, 0);
+}
+
+.completed {
+  color: green;
+}
+
+.sortBtn {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-weight: thin;
+  background-color: rgb(195, 195, 236);
+  border: 1px solid black;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  border-radius: 5px;
+}
+
+.delBtn {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  color: rgb(110, 0, 0);
+  font-weight: bold;
+}
+
+/* Form Styles */
+
+form, .loginDiv {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+
+form button {
+  border: none;
+  background-color: white;
+}
+
+form input, select {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid rgb(195, 195, 236);
+  border-radius: 5px;
+}
+
+.colorDiv {
+  display: flex;
+  align-items: center;
+}
+form i {
+  font-size: 2.5rem;
+  margin: 5px;
+  color: rgb(195, 195, 236);
+}
+
+form i:hover {
+  cursor: pointer;
+  color: rgb(174, 174, 209);
+}
+
+/* User Info Styles */
+
+.userButton {
+  background-color: rgb(195, 195, 236);
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.signoutButton {
+  background-color: rgb(236, 195, 195);
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.userInfoDiv {
+  margin-top: 20px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.buttonDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.userid {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.defaultDiv h1 {
+  text-align: center;
+}
+.defaultDiv label {
+  display: block;
+}
+.subheader {
+  text-align: center;
+}
+.modalDiv {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 250px auto;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+/* Tablet */
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+/* General Body Styles */
+body {
+  color: rgb(49, 49, 49);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(250, 249, 249);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Header Styles */
+
+h1 {
+  font-family: Cookie, sans-serif;
+}
+
+.siteHeader {
+  color: inherit;
+  text-decoration: none;
+  background-color: rgb(195, 195, 236);
+  padding: 20px 50px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.siteHeader h1 {
+  font-weight: 200;
+}
+.headerDiv {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Link Styles */
+.linksBtn {
+  font-size: 2.5rem;
+  display: flex;
+  align-self: center;
+  border: 3px solid rgb(195, 195, 236);
+  color:rgb(153, 153, 153);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.linkDiv {
+  width: 180px;
+  justify-content: center;
+  align-items: start;
+}
+ .linkDiv a {
+  font-weight: 600
+ }
+/* Main Content Styles */
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainDiv h1 {
+  font-weight: 400;
+  font-size: 3.5rem;
+  letter-spacing: 0.05em;
+  margin: 50px 20px 20px 20px;
+}
+
+/* Task List Styles */
+
+.taskLi {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  margin: 15px;
+  margin-bottom: 40px;
+}
+
+.taskLi h2 {
+  text-decoration: underline;
+  font-size: 1.75rem;
+  margin: 10px 10px 25px 10px;
+}
+
+.taskInfo i {
+  font-size: 5.5em;
+  margin-top: 20px;
+}
+
+.taskInfo {
+  display: flex;
+  padding: 35px;
+  margin: 15px;
+  justify-content: space-between;
+}
+
+.taskHead {
+  text-align: center;
+}
+
+.taskInfo button {
+  background-color: rgb(195, 195, 236);
+  border: 2px solid black;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.taskTitle {
+  text-decoration: underline;
+}
+
+.taskDesc {
+  font-size: 1.25rem;
+}
+
+.sortBtn {
+  font-size: 1rem;
+}
+
+.aboutDiv {
+  max-width: 800px;
+}
+
+.aboutDiv p {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+/* Sticky Note Styles */
+.sticky-note {
+
+  width: 800px;
+  height: 350px;
+  padding: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.sticky-note:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Styles */
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 15px 30px;
+}
+
+form button {
+  border: none;
+  background-color: white;
+}
+
+form label {
+  text-align: center;
+}
+
+form input, select {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid rgb(195, 195, 236);
+  border-radius: 5px;
+}
+
+form select{
+  width: 33%;
+  align-self: center;
+}
+
+form i {
+  font-size: 2.5rem;
+  margin: 5px;
+  color: rgb(195, 195, 236);
+}
+
+form i:hover {
+  cursor: pointer;
+  color: rgb(174, 174, 209);
+}
+
+.colorDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Misc Styles */
+
+
+
+
+
+
+i:hover {
+  cursor: pointer;
+}
+
+.sortBtn {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 5px;
+
+}
+
+
+.inputDiv {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+  
+}
