@@ -14,7 +14,7 @@ export default function CompletedTasks(){
 
     
     useEffect(() => {
-      fetch('http://localhost:5000/api/tasks/completed')
+      fetch('https://etbackend-production.up.railway.app/api/tasks/completed')
       .then(response => response.json())
       .then(data => {
         const userData = data.filter(task => task.postedBy === userName)
