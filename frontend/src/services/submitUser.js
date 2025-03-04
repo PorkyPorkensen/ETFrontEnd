@@ -18,7 +18,7 @@ export default async function submitUser(userName, setUserID){
         userID: generatedID,
     }
     try {
-        const response = await fetch('/api/users', {
+        const response = await fetch('https://etbackend-production.up.railway.app/api/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

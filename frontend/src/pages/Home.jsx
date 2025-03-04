@@ -12,7 +12,7 @@ function Home() {
   const userName = localStorage.getItem('userName') || '';
 
   useEffect(() => {
-    fetch('https://etbackend-production.up.railway.app//api/tasks')
+    fetch('https://etbackend-production.up.railway.app/api/tasks')
       .then(response => response.json())
       .then(data => {
         const userData = data.filter(task => task.postedBy === userName)

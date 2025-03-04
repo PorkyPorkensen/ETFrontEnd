@@ -1,6 +1,6 @@
 export default async function attemptLogin(loginUserName, loginUserID, setUserID) {
     try {
-        const response = await fetch('/api/users', {
+        const response = await fetch('https://etbackend-production.up.railway.app/api/users', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

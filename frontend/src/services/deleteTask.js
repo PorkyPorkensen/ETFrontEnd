@@ -1,6 +1,6 @@
 export default async function deleteTask(id){
     try {
-        const response = await fetch(`/api/tasks/${id}`, {
+        const response = await fetch(`https://etbackend-production.up.railway.app/api/users/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
