@@ -12,7 +12,6 @@ export default async function toggleTaskCompletion(id, state, setState) {
         }
 
         const data = await response.json();
-        console.log(data.message);
 
     } catch (error) {
         console.error('Error updating task:', error);

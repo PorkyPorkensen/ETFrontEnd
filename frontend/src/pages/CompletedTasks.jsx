@@ -3,6 +3,7 @@ import sortTasks from '../services/sortTasks';
 import toggleSortOrder1 from '../services/toggleSortOrder1';
 import deleteTask from '../services/deleteTask';
 import toggleTaskCompletion from '../services/toggleTaskCompletion';
+import Modal from '../components/Modal';
 
 export default function CompletedTasks(){
 
@@ -26,15 +27,7 @@ export default function CompletedTasks(){
     
     if (userName === '' || userName === null) {
       return (
-        <div className='modal-overlay' style={{ display: isModalOpen ? 'block' : 'none' }}>
-        <div className='modalDiv'>
-          <h2>Must have an account to view Tasks</h2>
-          <p>Go to the <a href='/userinfo'>User Info</a> page to create an account or log in.</p>
-          <p>Enjoy 0 Strings Attatched Signup!</p>
-          <button className='userButton' onClick={() => setIsModalOpen(false)}>Close</button>
-        </div>
-
-        </div>
+          <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       )
     }
 

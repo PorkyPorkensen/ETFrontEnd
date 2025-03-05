@@ -1,6 +1,7 @@
 import { useState } from "react";
 import submitUser from "../services/submitUser";
 import attemptLogin from "../services/attemptLogin";
+import updateUsername from "../services/updateUsername";
 
 export default function UserInfo(){
     const [userName, setUserName] = useState('')
@@ -8,6 +9,9 @@ export default function UserInfo(){
     const [loginUserName, setLoginUserName] = useState('')
     const [loginUserID, setLoginUserID] = useState('')
     const [passwordHidden, setPasswordHidden] = useState(true)
+    const [newUsername, setNewUsername] = useState('')
+    const idPlaceholder = userID || loginUserID || localStorage.getItem('userID');
+
     function signOut(){
         localStorage.clear()
         window.location.reload()
@@ -74,6 +78,19 @@ export default function UserInfo(){
                 <div className="buttonDiv">
                     <button className='userButton' style={passwordHidden ? {display: "none"} : {display: "block"}} onClick={copyToClipboard}>Copy ID</button>
                     <button className='userButton' onClick={() => setPasswordHidden(!passwordHidden)}>{passwordHidden ? 'Show Password' : 'Hide Password'}</button>
+                </div>
+                <div className="changeUsernameDiv">
+                    <label className='CU' htmlFor="newUsername">Change Username:</label>
+                    <input
+                        type="text"
+                        id="newUsername"
+                        value={newUsername}
+                        onChange={(e) => setNewUsername(e.target.value)}
+                        required
+                    />
+                    <br />
+                    <br />
+                    <button className='userButton' onClick={() => updateUsername(idPlaceholder, newUsername, setNewUsername )}>Update Username</button>
                 </div>
                 <br />
                 <br />

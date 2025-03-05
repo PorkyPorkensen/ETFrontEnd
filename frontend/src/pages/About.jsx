@@ -7,7 +7,10 @@ export default function About(){
                 this site has <a className="red">almost ZERO security,</a> which is why you are given a password as opposed to using one of your own. Because of that, 
                 <a className="red"> please refrain from posting ANY sensitive information.</a>  I hope you enjoy using it as much as I enjoyed building it.
             </p>
-            <p>For any questions or inquiries, please <a href="https://github.com/PorkyPorkensen">connect with me on Github!</a></p>
+            <h1>How to Use</h1>
+            <p className="aboutP">To get started, head to the <a href="/userinfo">User Info</a> page, enter a username and hit the "Generate User ID" button. Once you have a username, you can create tasks. 
+                If you ever want to change your username, you can do so on the User Info page.</p>
+            <p className="divFooter">For any questions or inquiries, please <a href="https://github.com/PorkyPorkensen">connect with me on Github!</a></p>
         </div>
     )
 }

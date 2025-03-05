@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import formatDate from '../services/formatDate';
+import Modal from '../components/Modal';
 
 export default function NewTask() {
     const [taskName, setTaskName] = useState('');
@@ -8,17 +9,10 @@ export default function NewTask() {
     const userName = localStorage.getItem('userName') || ''
     const userId = localStorage.getItem('userID') || ''
     const [ isModalOpen, setIsModalOpen ] = useState(true);
+    
     if (userName === '' || userName === null) {
         return (
-          <div className='modal-overlay' style={{ display: isModalOpen ? 'block' : 'none' }}>
-          <div className='modalDiv'>
-            <h2>Must have an account to view Tasks</h2>
-            <p>Go to the <a href='/userinfo'>User Info</a> page to create an account or log in.</p>
-            <p>Enjoy 0 Strings Attatched Signup!</p>
-            <button className='userButton' onClick={() => setIsModalOpen(false)}>Close</button>
-          </div>
-  
-          </div>
+            <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
         )
       }
     console.log(localStorage)
@@ -49,6 +43,7 @@ export default function NewTask() {
             console.log(response)
             if (response.ok) {
                 console.log('Task created successfully!')
+                alert('Task created successfully!')
                 setTaskName('')
                 setTaskDesc('')
             } else {
@@ -56,6 +51,7 @@ export default function NewTask() {
             }
         } catch (error) {
             console.error('Error:', error);
+            alert(`Failed to create task! ${error}`)
         }
     };
 

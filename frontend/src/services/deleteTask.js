@@ -10,9 +10,11 @@ export default async function deleteTask(id){
         if (response.ok) {
             console.log('Task deleted successfully!')
             alert('Task deleted successfully!')
+            window.location.reload();
         } else {
             console.error('Failed to delete task');
             alert('Failed to delete task!')
+
         }
     } catch (error) {
         console.error('Error:', error);
