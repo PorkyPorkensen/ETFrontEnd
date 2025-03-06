@@ -107,7 +107,7 @@ i:hover {
 /* Sticky Note Styles */
 .sticky-note {
   min-height: 300px;
-  min-width: 350px;
+  min-width: 250px;
   background: linear-gradient(to bottom, #ffffcc, #f5f5a2);
   width: 70%;
   max-width: 800px;
@@ -170,7 +170,7 @@ ul {
 }
 
 .taskLi h2 {
-  font-family: cursive;
+  font-family: monospace;
   font-size: 1.75rem;
   text-decoration: underline;
   margin: 10px 10px 25px 10px;
@@ -206,7 +206,7 @@ ul {
 }
 
 .taskDesc {
-  font-family: cursive;
+  font-family: monospace;
   font-size: 1.2rem;
 }
 
@@ -471,6 +471,12 @@ h1 {
   margin: 10px 10px 25px 10px;
 }
 
+.taskLi h2, .taskDesc {
+  font-family: cursive;
+  text-align: center;
+}
+
+
 .taskInfo i {
   font-size: 5.5em;
   margin-top: 20px;
@@ -509,6 +515,7 @@ h1 {
 
 .aboutDiv {
   max-width: 800px;
+  padding: 0 3.5em 3.5em 3.5em;
 }
 
 .aboutDiv p {
@@ -575,9 +582,24 @@ form i:hover {
 }
 
 .colorDiv {
+  margin-top: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+input {
+  width: 90%;
+  font-size: 1.25rem;
+}
+
+.login {
+  width: 80%;
+  margin-top: -20px;
+}
+
+.loginDiv, .changeUsernameDiv {
+  border: 1px solid rgb(195, 195, 236)
 }
 
 /* Misc Styles */

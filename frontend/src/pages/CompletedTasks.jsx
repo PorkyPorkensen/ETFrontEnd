@@ -27,7 +27,7 @@ export default function CompletedTasks(){
     
     if (userName === '' || userName === null) {
       return (
-          <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+          <Modal state={isModalOpen} setState={setIsModalOpen} />
       )
     }
 

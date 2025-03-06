@@ -11,6 +11,7 @@ function Home() {
   const [updatedTasks, setUpdatedTasks] = useState(0);
   const [sortOrder, setSortOrder] = useState('new-old');
   const userName = localStorage.getItem('userName') || '';
+  const [ isModalOpen, setIsModalOpen ] = useState(true);
 
   useEffect(() => {
     fetch('https://etbackend-production.up.railway.app/api/tasks')
@@ -24,11 +25,11 @@ function Home() {
       .catch(error => console.error('Error fetching tasks:', error));
     }, [updatedTasks, sortOrder]);
 
-    const [ isModalOpen, setIsModalOpen ] = useState(true);
+
     
     if (userName === '' || userName === null) {
       return (
-          <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+          <Modal state={isModalOpen} setState={setIsModalOpen} />
       )
     }
  

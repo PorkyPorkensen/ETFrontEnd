@@ -11,10 +11,10 @@ export default function NewTask() {
     const [ isModalOpen, setIsModalOpen ] = useState(true);
     
     if (userName === '' || userName === null) {
-        return (
-            <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
-        )
-      }
+      return (
+          <Modal state={isModalOpen} setState={setIsModalOpen} />
+      )
+    }
     console.log(localStorage)
     // localStorage.clear()
     async function handleSubmit(e){

@@ -41,14 +41,14 @@ export default function UserInfo(){
                     <br />
                     <label htmlFor="loginUserID">Password / User ID:</label>
                     <input
-                            type="text"
+                            type="password"
                             id="loginUserID"
                             value={loginUserID}
                             onChange={(e) => setLoginUserID(e.target.value)}
                             required
                         />
                         <br />
-                        <button className="userButton" onClick={() => attemptLogin(loginUserName, loginUserID, setUserID)}>Log in</button>
+                        <button className="userButton login" onClick={() => attemptLogin(loginUserName, loginUserID, setUserID)}>Log in</button>
 
                 </div>
                             <h2 className="subHeader">Don't have an account? Create one here</h2>
