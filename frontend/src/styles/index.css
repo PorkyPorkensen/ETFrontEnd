@@ -472,7 +472,7 @@ h1 {
 }
 
 .taskLi h2, .taskDesc {
-  font-family: cursive;
+  font-family: monospace;
   text-align: center;
 }
 
