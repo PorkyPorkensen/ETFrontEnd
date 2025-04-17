@@ -19,7 +19,8 @@ export default async function attemptLogin(loginUserName, loginUserID, setUserID
         }
 
         // Store token and user info
-        localStorage.setItem('token', data.token);
+        localStorage.setItem('accessToken', data.accessToken);
+        localStorage.setItem('refreshToken', data.refreshToken);
         localStorage.setItem('userName', data.userName);
         localStorage.setItem('userID', data.userID);
         setUserID(data.userID);

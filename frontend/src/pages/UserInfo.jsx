@@ -12,7 +12,15 @@ export default function UserInfo(){
     const [newUsername, setNewUsername] = useState('')
     const idPlaceholder = userID || loginUserID || localStorage.getItem('userID');
 
-    function signOut(){
+    async function signOut(){
+        const token = localStorage.getItem('refreshToken');
+
+        await fetch('https://etbackend-production.up.railway.app/logout', {
+            method: "POST",
+            headers: {'Content-Type' : 'application/json'},
+            body: JSON.stringify({token})
+        });
+
         localStorage.clear()
         window.location.reload()
     }

@@ -33,7 +33,7 @@ export default function NewTask() {
             return
         }
         try {
-            const response = await fetch('https://etbackend-production.up.railway.app/api/tasks', {
+            const response = await fetch('localhost:5000/api/tasks', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

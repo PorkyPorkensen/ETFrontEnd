@@ -1,6 +1,8 @@
+import authFetch from "./authFetch";
+
 export default async function deleteTask(id){
     try {
-        const response = await fetch(`https://etbackend-production.up.railway.app/api/tasks/${id}`, {
+        const response = await authFetch(`https://etbackend-production.up.railway.app/api/tasks/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

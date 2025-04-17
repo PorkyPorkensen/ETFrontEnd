@@ -1,6 +1,8 @@
+import authFetch from "./authFetch";
+
 export default async function updateUsername(id, newUsername, setNewUsername) {
     try {
-        const response = await fetch(`https://etbackend-production.up.railway.app/api/users/${id}`, {
+        const response = await authFetch(`https://etbackend-production.up.railway.app/api/users/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

@@ -1,6 +1,8 @@
+import authFetch from "./authFetch";
+
 export default async function toggleTaskCompletion(id, state, setState) {
     try {
-        const response = await fetch(`https://etbackend-production.up.railway.app/api/tasks/${id}`, {
+        const response = await authFetch(`https://etbackend-production.up.railway.app/api/tasks/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
