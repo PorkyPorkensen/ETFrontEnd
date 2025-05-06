@@ -14,16 +14,26 @@ function Home() {
   const [ isModalOpen, setIsModalOpen ] = useState(true);
 
   useEffect(() => {
-    fetch('https://etbackend-production.up.railway.app/api/tasks')
-      .then(response => response.json())
+    const accessToken = localStorage.getItem('accessToken');
+  
+    fetch('https://etbackend-production.up.railway.app/api/tasks', {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => {
+        if (!response.ok) throw new Error('Unauthorized');
+        return response.json();
+      })
       .then(data => {
-        const userData = data.filter(task => task.postedBy === userName)
+        const userData = data.filter(task => task.postedBy === userName);
         const sortedData = sortTasks(userData, sortOrder);
-        setTasks(sortedData)
-
+        setTasks(sortedData);
       })
       .catch(error => console.error('Error fetching tasks:', error));
-    }, [updatedTasks, sortOrder]);
+  }, [updatedTasks, sortOrder]);
 
 
     

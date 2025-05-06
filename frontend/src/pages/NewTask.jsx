@@ -33,10 +33,12 @@ export default function NewTask() {
             return
         }
         try {
-            const response = await fetch('localhost:5000/api/tasks', {
+            const accessToken = localStorage.getItem('accessToken')
+            const response = await fetch('https://etbackend-production.up.railway.app/api/tasks', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${accessToken}`,
                 },
                 body: JSON.stringify(newTask),
             });

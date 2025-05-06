@@ -15,8 +15,14 @@ export default function CompletedTasks(){
 
     
     useEffect(() => {
-      fetch('https://etbackend-production.up.railway.app/api/tasks/completed')
-      .then(response => response.json())
+      const accessToken = localStorage.getItem('accessToken')
+      fetch('https://etbackend-production.up.railway.app/api/tasks/completed', {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+          'Content-Type': 'application/json',
+        },
+      }).then(response => response.json())
       .then(data => {
         const userData = data.filter(task => task.postedBy === userName)
         const sortedData = sortTasks(userData, sortOrder);
