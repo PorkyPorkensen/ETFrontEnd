@@ -15,7 +15,7 @@ export default function NewTask() {
           <Modal state={isModalOpen} setState={setIsModalOpen} />
       )
     }
-    console.log(localStorage)
+   
     // localStorage.clear()
     async function handleSubmit(e){
         e.preventDefault()
@@ -68,6 +68,7 @@ export default function NewTask() {
                         id="taskName"
                         value={taskName}
                         onChange={(e) => setTaskName(e.target.value)}
+                        maxLength={50}
                         required
                     />
                     <br />
@@ -77,6 +78,7 @@ export default function NewTask() {
                         id="taskDesc"
                         value={taskDesc}
                         onChange={(e) => setTaskDesc(e.target.value)}
+                        maxLength={120}
                     />
                 </div>
                 <div className='colorDiv'>

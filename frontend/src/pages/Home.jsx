@@ -4,6 +4,7 @@ import toggleSortOrder1 from '../services/toggleSortOrder1';
 import deleteTask from '../services/deleteTask';
 import toggleTaskCompletion from '../services/toggleTaskCompletion';
 import Modal from '../components/Modal';
+import LoginModal from '../components/LoginModal';
 
 function Home() {
 
@@ -13,8 +14,8 @@ function Home() {
   const userName = localStorage.getItem('userName') || '';
   const [ isModalOpen, setIsModalOpen ] = useState(true);
 
+  const accessToken = localStorage.getItem('accessToken');
   useEffect(() => {
-    const accessToken = localStorage.getItem('accessToken');
   
     fetch('https://etbackend-production.up.railway.app/api/tasks', {
       method: 'GET',
@@ -37,17 +38,27 @@ function Home() {
 
 
     
+
     if (userName === '' || userName === null) {
       return (
           <Modal state={isModalOpen} setState={setIsModalOpen} />
       )
     }
+
+    if (userName && !accessToken){
+      return (
+        <LoginModal state={isModalOpen} setState={setIsModalOpen} />
+      )
+    }
+
+
  
   return (
     <div className='mainDiv'>
       <h1>{userName ? `${userName}'s` : 'All'} Tasks</h1>
       <button className='sortBtn'
       onClick={() => setSortOrder(toggleSortOrder1(sortOrder))}>Sort: {sortOrder === 'new-old' ? 'Newest First' : 'Oldest First'}</button>
+      <button onClick={() => localStorage.removeItem("accessToken")} ></button>
         { tasks.length < 1 ? (
             <h2>No tasks available. Add a new task!</h2>
           ) : 
